@@ -48,8 +48,7 @@
         <section>
           <section data-markdown>
             <h1>The <span>Problem</span></h1>
-            <pre><code class="ruby">
-            class PostsController < ApplicationController
+            <pre><code class="ruby">class PostsController < ApplicationController
               def update
                 @post = Post.find(params[:id])
                 @post.update_attributes(params[:post])
@@ -66,8 +65,7 @@
           </section>
           <section data-markdown>
             <h1>The <span>Problem</span></h1>
-            <pre><code class="ruby">
-              <%= form_for(@post) do |f| %>
+            <pre><code class="ruby"><%= form_for(@post) do |f| %>
                 <%= f.text_field :title %>
                 <%= f.text_area :body %>
 
@@ -87,8 +85,7 @@
         </section>
         <section data-markdown>
           <h1>The <span>Solution</span></h1>
-          <pre><code class="ruby">
-          ActiveAdmin.register Post do
+          <pre><code class="ruby">ActiveAdmin.register Post do
           end
 
           ActiveAdmin.register Page do
@@ -102,13 +99,11 @@
         <section data-markdown>
           <h1>Get <span>Started</span></h1>
           <h3>Add to Gemfile</h3>
-          <pre><code class="ruby">
-          gem 'activeadmin'
+          <pre><code class="ruby">gem 'activeadmin'
           </code></pre>
 
           <h3>Run in CLI</h3>
-          <pre><code class="bash">
-          rails generate active_admin:install
+          <pre><code class="bash">rails generate active_admin:install
           rails generate active_admin:resource [resource]
           </code></pre>
         </section>
@@ -118,8 +113,7 @@
           </section>
           <section data-markdown>
             <h1>Index <span>Views</span></h1>
-            <pre><code class="ruby">
-            index do
+            <pre><code class="ruby">index do
               column :title
               column :author
               default_actions
@@ -135,8 +129,7 @@
           </section>
           <section data-markdown>
             <h1>Show <span>Views</span></h1>
-            <pre><code class="ruby">
-            show do
+            <pre><code class="ruby">show do
               h3 post.title
               div do
                 markdown post.body
@@ -153,8 +146,7 @@
           </section>
           <section data-markdown>
             <h1>Form <span>Definitions</span></h1>
-            <pre><code class="ruby">
-            form do |f|
+            <pre><code class="ruby">form do |f|
               f.inputs "Post Details" do
                 f.input :title
                 f.input :author, :as => :select, :collection => ["Tristan O'Neil"]
@@ -168,8 +160,7 @@
           </section>
           <section data-markdown>
             <h1>Controller <span>Definitions</span></h1>
-            <pre><code class="ruby">
-            controller do
+            <pre><code class="ruby">controller do
               def update
                 # override default update action behavior.
               end
