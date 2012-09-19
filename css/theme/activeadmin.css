@@ -1,0 +1,43 @@
+body {
+  color:#595959;
+  font-family:"Arvo", Helvetica, sans-serif;
+  background:#f6f4f1;
+}
+
+.reveal .controls { display:none !important; }
+
+div.center-vertically {
+  position:absolute;
+  top:35%;
+}
+
+.reveal h1 {
+  font-size:120px;
+  line-height:130px;
+  font-weight:900;
+  text-align:left;
+  margin-left:45px;
+}
+
+.reveal h1 span { color:#427886; }
+
+.reveal h2 {
+  font-weight:300;
+  text-align:left;
+  margin-left:45px;
+}
+
+.reveal h3 {
+  margin:20px 0 -30px 45px;
+  text-align:left;
+}
+
+.reveal pre {
+  font-size:18px;
+  margin:50px auto;
+}
+
+.reveal pre code {
+  background:#fff;
+  color:#000;
+}
