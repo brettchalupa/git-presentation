@@ -65,7 +65,7 @@
           </section>
           <section data-markdown>
             <h1>The <span>Problem</span></h1>
-            <pre><code class="ruby"><%= form_for(@post) do |f| %>
+            <pre><code class="ruby">  <%= form_for(@post) do |f| %>
                 <%= f.text_field :title %>
                 <%= f.text_area :body %>
 
@@ -73,9 +73,7 @@
               <% end %>
 
               <%= form_for(@page) do |f| %>
-                <%= f.label :title %>
                 <%= f.text_field :title %>
-                <%= f.label :body %>
                 <%= f.text_area :body %>
 
                 <%= f.submit %>
