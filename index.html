@@ -45,33 +45,55 @@
             <h2>An administration framework for Ruby on Rails</h2>
           </div>
         </section>
-        <section data-markdown>
-          <h1>The <span>Problem</span></h1>
-          ```ruby
-          class PostsController < ApplicationController
-            def update
-              @post = Post.find(params[:id])
-              @post.update_attributes(params[:post])
+        <section>
+          <section data-markdown>
+            <h1>The <span>Problem</span></h1>
+            <pre><code class="ruby">
+            class PostsController < ApplicationController
+              def update
+                @post = Post.find(params[:id])
+                @post.update_attributes(params[:post])
+              end
             end
-          end
 
-          class PagesController < ApplicationController
-            def update
-              @page = Page.find(params[:id])
-              @page.update_attributes(params[:page])
+            class PagesController < ApplicationController
+              def update
+                @page = Page.find(params[:id])
+                @page.update_attributes(params[:page])
+              end
             end
-          end
-          ```
+            </pre></code>
+          </section>
+          <section data-markdown>
+            <h1>The <span>Problem</span></h1>
+            <pre><code class="ruby">
+              <%= form_for(@post) do |f| %>
+                <%= f.text_field :title %>
+                <%= f.text_area :body %>
+
+                <%= f.submit %>
+              <% end %>
+
+              <%= form_for(@page) do |f| %>
+                <%= f.label :title %>
+                <%= f.text_field :title %>
+                <%= f.label :body %>
+                <%= f.text_area :body %>
+
+                <%= f.submit %>
+              <% end %>
+            </pre></code>
+          </section>
         </section>
         <section data-markdown>
           <h1>The <span>Solution</span></h1>
-          ```ruby
+          <pre><code class="ruby">
           ActiveAdmin.register Post do
           end
 
           ActiveAdmin.register Page do
           end
-          ```
+          </code></pre>
         </section>
         <section>
           <h1>It's <span>Pretty</span></h1>
@@ -80,15 +102,15 @@
         <section data-markdown>
           <h1>Get <span>Started</span></h1>
           <h3>Add to Gemfile</h3>
-          ```ruby
+          <pre><code class="ruby">
           gem 'activeadmin'
-          ```
+          </code></pre>
 
           <h3>Run in CLI</h3>
-          ```bash
+          <pre><code class="bash">
           rails generate active_admin:install
           rails generate active_admin:resource [resource]
-          ```
+          </code></pre>
         </section>
         <section>
           <section>
@@ -96,7 +118,7 @@
           </section>
           <section data-markdown>
             <h1>Index <span>Views</span></h1>
-            ```ruby
+            <pre><code class="ruby">
             index do
               column :title
               column :author
@@ -109,11 +131,11 @@
                 column :some_secret_data
               end
             end
-            ```
+            </code></pre>
           </section>
           <section data-markdown>
             <h1>Show <span>Views</span></h1>
-            ```ruby
+            <pre><code class="ruby">
             show do
               h3 post.title
               div do
@@ -127,11 +149,11 @@
                 end
               end
             end
-            ```
+            </code></pre>
           </section>
           <section data-markdown>
             <h1>Form <span>Definitions</span></h1>
-            ```ruby
+            <pre><code class="ruby">
             form do |f|
               f.inputs "Post Details" do
                 f.input :title
@@ -142,17 +164,17 @@
 
               f.buttons
             end
-            ```
+            </code></pre>
           </section>
           <section data-markdown>
             <h1>Controller <span>Definitions</span></h1>
-            ```ruby
+            <pre><code class="ruby">
             controller do
               def update
                 # override default update action behavior.
               end
             end
-            ```
+            </code></pre>
           </section>
         </section>
         <section>
