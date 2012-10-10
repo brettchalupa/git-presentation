@@ -12,10 +12,10 @@ div.center-vertically {
 }
 
 .reveal h1 {
-  font-size:120px;
+  font-size:54px;
   line-height:130px;
   font-weight:900;
-  text-align:left;
+  text-align:center;
   margin-left:45px;
 }
 
@@ -23,8 +23,9 @@ div.center-vertically {
 
 .reveal h2 {
   font-weight:300;
-  text-align:left;
   margin-left:45px;
+  font-size: 1.9em;
+  text-align: center;
 }
 
 .reveal h3 {

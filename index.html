@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>ActiveAdmin</title>
+    <title>Git Back Control of Your Code</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -41,44 +41,18 @@
       <div class="slides">
         <section>
           <div class="center-vertically">
-            <h1>Active<span>Admin</span></h1>
-            <h2>An administration framework for Ruby on Rails</h2>
+            <h1><span>Git Back Control of Your Code</span></h1>
+            <h2>Learning How to Manage Your Code with Git & GitHub</h2>
           </div>
         </section>
         <section>
           <section data-markdown>
-            <h1>The <span>Problem</span></h1>
-            <pre><code class="ruby">class PostsController < ApplicationController
-              def update
-                @post = Post.find(params[:id])
-                @post.update_attributes(params[:post])
-              end
-            end
-
-            class PagesController < ApplicationController
-              def update
-                @page = Page.find(params[:id])
-                @page.update_attributes(params[:page])
-              end
-            end
-            </pre></code>
+            <h1>What is <span>Version Control</span>?</h1>
+            <h2>define: version control</h2>
+            <h3><em>The task of keeping a software system consisting of many versions and configurations well organized.</em></h3>
           </section>
           <section data-markdown>
-            <h1>The <span>Problem</span></h1>
-            <pre><code class="ruby">  <%= form_for(@post) do |f| %>
-                <%= f.text_field :title %>
-                <%= f.text_area :body %>
-
-                <%= f.submit %>
-              <% end %>
-
-              <%= form_for(@page) do |f| %>
-                <%= f.text_field :title %>
-                <%= f.text_area :body %>
-
-                <%= f.submit %>
-              <% end %>
-            </pre></code>
+            <h1>Why use <span>Version Control</span>?</h1>
           </section>
         </section>
         <section data-markdown>
