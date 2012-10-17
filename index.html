@@ -46,102 +46,137 @@
           </div>
         </section>
         <section>
-          <section data-markdown>
+          <div>
+            <h1><span>Who am I?</span></h1>
+            <h2>Brett Chalupa</h2>
+            <ul>
+              <li>Developer at Gristmill</li>
+              <li>Guy who smiles a lot</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <section>
             <h1>What is <span>Version Control</span>?</h1>
             <h2>define: version control</h2>
             <h3><em>The task of keeping a software system consisting of many versions and configurations well organized.</em></h3>
           </section>
-          <section data-markdown>
+          <section>
             <h1>Why use <span>Version Control</span>?</h1>
+            <ul>
+              <li>Confidence</li>
+              <li>Collaboration</li>
+              <li>Process</li>
+            </ul>
           </section>
-        </section>
-        <section data-markdown>
-          <h1>The <span>Solution</span></h1>
-          <pre><code class="ruby">ActiveAdmin.register Post do
-          end
-
-          ActiveAdmin.register Page do
-          end
-          </code></pre>
-        </section>
-        <section>
-          <h1>It's <span>Pretty</span></h1>
-          <img src="http://f.cl.ly/items/2s2Y3r0k35062H1n3V0r/activeadmin.png" alt="ActiveAdmin">
-        </section>
-        <section data-markdown>
-          <h1>Get <span>Started</span></h1>
-          <h3>Add to Gemfile</h3>
-          <pre><code class="ruby">gem 'activeadmin'
-          </code></pre>
-
-          <h3>Run in CLI</h3>
-          <pre><code class="bash">rails generate active_admin:install
-          rails generate active_admin:resource [resource]
-          </code></pre>
         </section>
         <section>
           <section>
-            <h1><span>D</span>omain <span>S</span>pecific <span>L</span>anguage</h1>
+            <h1>What is <span>Git</span>?</h1>
+            <h2>define: git</h2>
+            <h3><em>Git is an extremely fast, efficient, distributed version control system ideal for the collaborative development of software.</em></h3>
           </section>
-          <section data-markdown>
-            <h1>Index <span>Views</span></h1>
-            <pre><code class="ruby">index do
-              column :title
-              column :author
-              default_actions
-            end
-
-            index do
-              column :title
-              if can? :manage, Post
-                column :some_secret_data
-              end
-            end
-            </code></pre>
-          </section>
-          <section data-markdown>
-            <h1>Show <span>Views</span></h1>
-            <pre><code class="ruby">show do
-              h3 post.title
-              div do
-                markdown post.body
-              end
-
-              panel "Comments" do
-                table_for(workshop.comments) do
-                  column :name
-                  column :email
-                end
-              end
-            end
-            </code></pre>
-          </section>
-          <section data-markdown>
-            <h1>Form <span>Definitions</span></h1>
-            <pre><code class="ruby">form do |f|
-              f.inputs "Post Details" do
-                f.input :title
-                f.input :author, :as => :select, :collection => ["Tristan O'Neil"]
-                f.input :created_at, :ampm =&gt; true
-                f.input :body
-              end
-
-              f.buttons
-            end
-            </code></pre>
-          </section>
-          <section data-markdown>
-            <h1>Controller <span>Definitions</span></h1>
-            <pre><code class="ruby">controller do
-              def update
-                # override default update action behavior.
-              end
-            end
-            </code></pre>
+          <section>
+            <h1>Why use <span>Git</span>?</h1>
+            <ul>
+              <li>Distributed</li>
+              <li>Community</li>
+              <li>Tools</li>
+            </ul>
           </section>
         </section>
         <section>
-          <h1>Demo <span>Time</span></h1>
+          <section>
+            <h1>The <span>Git</span> Workflow</h1>
+            <ol>
+              <li><span>Initialze a Repo</span></li>
+              <li>Make changes to the codebase</li>
+              <li>Stage the modified files for commit</li>
+              <li>Commit the changes</li>
+              <li>Push the changes</li>
+            </ol>
+          </section>
+          <section>
+            <h1>The <span>Git</span> Workflow</h1>
+            <h2>Creating a New Repository</h2>
+            <ol>
+              <li><code>git init</code></li>
+              <li><code>git status</code></li>
+              <li><code>git add changed_file.rb</code></li>
+              <li><code>git commit -m "change some files"</code></li>
+              <li><code>git push github master</code></li>
+            </ol>
+          </section>
+          <section>
+            <h1>The <span>Git</span> Workflow</h1>
+            <h2>Making Changes to an Existing Repository</h2>
+            <ol>
+              <li><code>git pull origin master</code></li>
+              <li><code>git status</code></li>
+              <li><code>git add changed_file.rb</code></li>
+              <li><code>git commit -m "change some files"</code></li>
+              <li><code>git push github master</code></li>
+            </ol>
+          </section>
+          <section>
+            <h1>The <span>Git</span> Workflow</h1>
+            <h2>Branching and Merging</h2>
+            <ol>
+              <li><code>git checkout -b bc/new_branch</code></li>
+              <li><code>git status</code></li>
+              <li><code>git add changed_file.rb</code></li>
+              <li><code>git commit -m "change some files"</code></li>
+              <li><code>git push github bc/new_branch</code></li>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <h1>Other Useful <span>Git</span> Commands</h1>
+          <pre>
+            <code class="bash">
+              git diff # show the differences
+              git branch -a # show all branches, locally and remotely
+               
+              git remote # list remotes
+              git remote -v # list remotes with detail
+              
+              git reset --hard HEAD~1 # go back 1 commit before the head
+              git remote rename origin github # rename a remote
+
+              git stash # temporarily store your changes
+              git stash pop # pop stashed changes back on top
+              git stash drop # drop stashed changes
+            </code>
+          </pre>
+        </section>
+        <section>
+          <section>
+            <h1>What is <span>GitHub</span>?</h1>
+            <h2>define: github</h2>
+            <h3><em>Online project hosting using Git.</em></h3>
+            <img src="https://raw.github.com/github/media/master/octocats/octocat.png" alt="Octocat"/>
+          </section>
+          <section>
+            <h1>Why use <span>GitHub</span>?</h1>
+            <ul>
+              <li>Pull Request</li>
+              <li>Gists</li>
+              <li>In-line Comments</li>
+              <li>Wikis</li>
+              <li>Repository Forking</li>
+              <li>Issue &amp; Bug Tracking</li>
+              <li>Octocats</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>Demo</h1>
+        </section>
+        <section>
+          <h1>Thank you!</h1>
+          <h2><a href="http://bit.ly/gristmill-git-presentation">http://bit.ly/gristmill-git-presentation</a></h2>
+          <h2><a href="http://gristmill.io">http://gristmill.io</a></h2>
+          <h2><a href="http://twitter.com/brettchalupa">@brettchalupa</a></h2>
         </section>
       </div>
 
