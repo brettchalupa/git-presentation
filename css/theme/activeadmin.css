@@ -1,7 +1,7 @@
 body {
-  color:#595959;
+  color:#A4DED7;
   font-family:"Arvo", Helvetica, sans-serif;
-  background:#f6f4f1;
+  background:#292928;
 }
 
 .reveal .controls { display:none !important; }
@@ -16,21 +16,21 @@ div.center-vertically {
   line-height:130px;
   font-weight:900;
   text-align:center;
-  margin-left:45px;
 }
 
-.reveal h1 span { color:#427886; }
+.reveal h1 span { color:#E89383; }
 
 .reveal h2 {
   font-weight:300;
-  margin-left:45px;
   font-size: 1.9em;
   text-align: center;
+  line-height: 1.8;
 }
 
 .reveal h3 {
   margin:20px 0 -30px 45px;
-  text-align:left;
+  text-align:center;
+  line-height: 1.5;
 }
 
 .reveal pre {
@@ -41,4 +41,17 @@ div.center-vertically {
 .reveal pre code {
   background:#fff;
   color:#000;
+}
+
+.reveal li {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.reveal ol, .reveal li {
+  margin-top: 20px;
+}
+
+.reveal a, .reveal a:active, .reveal a:visited {
+  color: #E89383;
 }
